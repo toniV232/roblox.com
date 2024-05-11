@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox-Themed Page</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .roblox-logo {
+            width: 200px;
+            margin-right: 20px;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-field {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+        }
+        .submit-button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #58BCF5;
+            color: #fff;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #4CAFDE;
+        }
+    </style>
+</head>
+<body>
+    <div class="roblox-logo">
+        <img src="https://cdn.roblox.com/images/favicon-32x32.png" alt="Roblox Favicon">
+    </div>
+    <div class="login-form">
+        <input class="input-field" type="text" id="username" placeholder="Username">
+        <input class="input-field" type="password" id="password" placeholder="Password">
+        <button class="submit-button" onclick="displayUserInfo()">Log In</button>
+        <p id="user-info"></p>
+    </div>
+
+    <script>
+        function displayUserInfo() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            document.getElementById("user-info").innerText = `Username: ${username}, Password: ${password}`;
+        }
+    </script>
+</body>
+</html>
